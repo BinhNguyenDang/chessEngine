@@ -3,7 +3,7 @@ class Game < ApplicationRecord
     has_many :users, through: :playables
   
     enum state: { in_progress: 0, checkmate: 1, draw: 2 }
-    enum turns: { white: 0, black: 1 }
+    enum turn: { white: 0, black: 1 }
   
     before_create :set_fen
     before_create :set_pgn
