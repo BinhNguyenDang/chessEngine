@@ -1,3 +1,4 @@
+<h4>Game Turn: <%= game.turn == 0 ? 'White' : 'Black' %></h4>
 <%= content_tag(:div, "", data: {
     controller: "chess",
     game_id: game.id,
