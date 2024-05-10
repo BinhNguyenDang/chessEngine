@@ -1,13 +1,19 @@
 class Game < ApplicationRecord
     has_many :playables, dependent: :destroy
     has_many :users, through: :playables
-  
+
     enum state: { in_progress: 0, checkmate: 1, draw: 2 }
     enum turn: { white: 0, black: 1 }
-  
+
+    before_validation :set_default_turn, on: :create
     before_create :set_fen
     before_create :set_pgn
-  
+
+
+    def set_default_turn
+      self.turn ||= 'white'
+    end
+    
     def set_fen
       turn_abbreviation = if turn == 'white'
                             'w'
