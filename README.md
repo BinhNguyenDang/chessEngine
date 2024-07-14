@@ -36,7 +36,7 @@ rails s
 # Features
 - Real-Time Chess Gameplay: Utilizes Hotwire and Action Cable for real-time game state updates.
 - Turbo: Enhances navigation and form submission without full page reloads.
-- Stimulus: Manages JavaScript components in a modest way.
+- Stimulus: Modestly manages JavaScript components.
 - CSS and JS Bundling: Uses cssbundling-rails and jsbundling-rails for asset management.
 - Responsive Design: Adapts layout for different devices using modern CSS.
 
